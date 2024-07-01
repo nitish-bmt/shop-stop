@@ -28,7 +28,7 @@ const Navbar: React.FC = ()=>{
 
     return(
         <>
-           <AppBar position="static">
+           <AppBar>
                 <Toolbar>
                     <Typography variant="h6" component="div" onClick={handleHomeClick} sx={{ flexGrow: 1 } }>
                         ShopStop

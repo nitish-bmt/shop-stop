@@ -26,7 +26,7 @@ const CartPage: React.FC = () => {
             sum += product.price;
         });
         setTotal(sum);
-    }, []);
+    }, [inCart]);
 
     return (
         <Box sx={{ p: 2 }}>
