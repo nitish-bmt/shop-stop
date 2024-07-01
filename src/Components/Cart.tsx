@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {useState} from 'react';
 import { CartContext } from './Main';
 import { MainContext } from './Main';
@@ -19,6 +19,14 @@ const CartPage: React.FC = () => {
     const clearCart = () => {
         setInCart([]);
     };
+
+    useEffect(()=>{
+        let sum = 0;
+        cartProducts.forEach( product => {
+            sum += product.price;
+        });
+        setTotal(sum);
+    }, []);
 
     return (
         <Box sx={{ p: 2 }}>
