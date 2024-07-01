@@ -1,11 +1,21 @@
-export interface ProductData{
-    id: number;
+export interface Rating {
+    rate: number;
+    count: number;
+}
+
+export interface ProductData {
+    id: string;
     title: string;
     price: number;
     description: string;
     category: string;
     image: string;
-    rating: [rate: string, count: number];
+    rating: Rating;
+}
+
+export interface ProductProps extends ProductData {
+    inCart: boolean;
+    toggleCartStatus: (id: string) => void;
 }
 
 // "id": 1,
